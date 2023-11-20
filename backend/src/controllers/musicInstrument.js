@@ -18,19 +18,23 @@ class MusicInstrument {
   }
 
   async filter(req, res) {
-    const filterType = Object.keys(req.query)[0];
-    const filterValue = Object.values(req.query)[0]
-    const findInstrument = await Models.find(filterValue, filterType, table);
+    const queryEntries = Object.entries(req.query);
+    const checkQueryValues = queryEntries.some(
+      ([key, value]) => value.trim() != ''
+    );
 
-    if (findInstrument) {
-      const data = {
-        message: `Mendapatkan alat musik dengan ${filterType} ${filterValue}`,
-        data: findInstrument,
-      };
-      return res.status(200).json(data);
+    if (queryEntries.length > 0 && checkQueryValues) {
+      const findInstrument = await Models.find(req.query, table);
+      if (findInstrument.length > 0) {
+        const data = {
+          message: `Mendapatkan alat musik dengan `,
+          data: findInstrument,
+        };
+        return res.status(200).json(data);
+      }
+      return res.status(404).json({ message: 'data Tidak ada' });
     }
-
-    res.status(404).json({ message: filterValue});
+    res.status(404).json({ message: 'data Tidak ada' });
   }
 
   async store(req, res) {
