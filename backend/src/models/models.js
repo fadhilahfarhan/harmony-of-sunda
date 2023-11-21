@@ -11,7 +11,7 @@ class Models {
     });
   }
 
-  static find(data, table) {
+  static filter(data, table) {
     return new Promise((resolve, reject) => {
       const keys = Object.keys(data);
       const placeholders = keys.map((key) => `${key} = ?`).join(' AND ');
@@ -32,7 +32,7 @@ class Models {
       });
     });
 
-    return this.find({ id: returnId }, table);
+    return this.filter({ id: returnId }, table);
   }
 }
 

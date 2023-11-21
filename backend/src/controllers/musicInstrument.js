@@ -24,7 +24,7 @@ class MusicInstrument {
     );
 
     if (queryEntries.length > 0 && checkQueryValues) {
-      const findInstrument = await Models.find(req.query, table);
+      const findInstrument = await Models.filter(req.query, table);
       if (findInstrument.length > 0) {
         const data = {
           message: `Mendapatkan alat musik dengan `,
