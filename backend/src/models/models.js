@@ -46,6 +46,18 @@ class Models {
     return this.find(returnId, table);
   }
 
+  static async update (data, id, table) {
+    await new Promise((resolve, reject) => {
+      const sql = 'UPDATE ?? SET ? WHERE id = ?';
+      db.query(sql, [table, data, id], (error, results) => {
+        if (error) throw error;
+        resolve(results)
+      })
+    })
+
+    return this.find(id, table);
+  }
+
   static delete(id, table){
     return new Promise((resolve, reject) => {
       const sql = 'DELETE FROM ?? WHERE id = ?';
