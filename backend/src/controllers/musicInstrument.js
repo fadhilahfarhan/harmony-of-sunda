@@ -27,7 +27,7 @@ class MusicInstrument {
       const findInstrument = await Models.filter(req.query, table);
       if (findInstrument.length > 0) {
         const data = {
-          message: `Mendapatkan alat musik dengan `,
+          message: `Mendapatkan data berhasil`,
           data: findInstrument,
         };
         return res.status(200).json(data);
@@ -35,6 +35,19 @@ class MusicInstrument {
       return res.status(404).json({ message: 'data Tidak ada' });
     }
     res.status(404).json({ message: 'data Tidak ada' });
+  }
+
+  async find(req, res) {
+    const { id } = req.params;
+    const findInstrument = await Models.find(id, table);
+    if (findInstrument) {
+      const data = {
+        message: 'mendapatkan data berdasarkan id',
+        data: findInstrument,
+      };
+      return res.status(200).json(data);
+    }
+    res.status(404).json({ message: 'data tidak ada' });
   }
 
   async store(req, res) {
@@ -46,6 +59,16 @@ class MusicInstrument {
     };
 
     res.status(200).json(data);
+  }
+
+  async destroy(req, res){
+    const { id } = req.params;
+    const findInstrument = await Models.find(id, table);
+    if(findInstrument){
+      Models.delete(id, table);
+      return res.status(200).json({message: 'Data berhasil dihapus'})
+    }
+    res.status(404).json({message: 'Data tidak ditemukan'})
   }
 }
 

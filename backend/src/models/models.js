@@ -23,6 +23,17 @@ class Models {
     });
   }
 
+  static find (id, table) {
+    return new Promise((resolve, reject) => {
+      const sql = 'SELECT * FROM ?? WHERE id = ?';
+      db.query(sql, [table, id], (error, results) => {
+        if (error) throw error;
+        const [data] = results;
+        resolve(data);
+      })
+    })
+  }
+
   static async create(data, table) {
     const returnId = await new Promise((resolve, reject) => {
       const sql = 'INSERT INTO ?? SET ?';
@@ -32,7 +43,17 @@ class Models {
       });
     });
 
-    return this.filter({ id: returnId }, table);
+    return this.find(returnId, table);
+  }
+
+  static delete(id, table){
+    return new Promise((resolve, reject) => {
+      const sql = 'DELETE FROM ?? WHERE id = ?';
+      db.query(sql, [table, id], (error, results) => {
+        if(error) throw error;
+        resolve(results);
+      }) 
+    })
   }
 }
 
