@@ -26,11 +26,9 @@ class MusicInstrument {
     const checkQueryValues = queryEntries.some(
       ([key, value]) => value.trim() != ''
     );
-
+ 
     if (queryEntries.length > 0 && checkQueryValues) {
       const findInstrument = await Models.filter(req.query, table);
-      console.log(findInstrument);
-      
       if (findInstrument.length > 0) {
         const data = {
           message: `Mendapatkan data berhasil`,
@@ -43,31 +41,28 @@ class MusicInstrument {
     res.status(404).json({ message: 'data Tidak ada' });
   }
 
-  // async find(req, res) {
-  //   const { id } = req.params;
-  //   const findInstrument = await Models.find(id, table);
-  //   if (findInstrument) {
-  //     const data = {
-  //       message: 'mendapatkan data berdasarkan id',
-  //       data: findInstrument,
-  //     };
-  //     return res.status(200).json(data);
-  //   }
-  //   res.status(404).json({ message: 'data tidak ada' });
-  // }
+  async find(req, res) {
+    const { id } = req.params;
+    const findInstrument = await Models.find(id, table);
+    if (findInstrument.length > 0) {
+      const data = {
+        message: 'mendapatkan data berdasarkan id',
+        data: findInstrument,
+      };
+      return res.status(200).json(data);
+    }
+    res.status(404).json({ message: 'data tidak ada' });
+  }
 
-  // async store(req, res) {
-  //   const storeInstrument = await Models.create(req.body, table);
+  async store(req, res) {
+    const storeInstrument = await Models.create(req.body, table);
+    if (storeInstrument) {
+      return res.status(200).json({ message: `menambahkan data alat musik` });
+    }
+    res.status(404).json({message: 'gagal'})
+  }
 
-  //   const data = {
-  //     message: `menambahkan data alat musik`,
-  //     data: storeInstrument,
-  //   };
-
-  //   res.status(200).json(data);
-  // }
-
-  // async update(req, res) {
+  // async update(req, res) { 
   //   const { id } = req.params;
   //   const { nama, jenis, gambar } = req.body;
   //   const findInstrument = await Models.find(id, table);
