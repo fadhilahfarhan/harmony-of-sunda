@@ -1,4 +1,3 @@
-import { query } from 'express';
 import pool from '../config/dbPostGreSQL.js';
 
 class Models {
@@ -7,7 +6,7 @@ class Models {
       const queryText = `SELECT * FROM ${table}`;
       const client = await pool.connect();
       client.query(queryText, (err, result)=>{
-        resolve(result.rows);
+        resolve(result.rows); 
       });
       client.release();
     });
