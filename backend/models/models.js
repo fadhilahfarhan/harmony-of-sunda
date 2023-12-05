@@ -1,3 +1,4 @@
+import { query } from 'express';
 import pool from '../config/dbPostGreSQL.js';
 
 class Models {
@@ -5,11 +6,12 @@ class Models {
     return new Promise(async (resolve, reject) => {
       const queryText = `SELECT * FROM ${table}`;
       const client = await pool.connect();
-      const result = await client.query(queryText);
+      client.query(queryText, (err, result)=>{
+        resolve(result.rows);
+      });
       client.release();
-      resolve(result.rows);
     });
-  } 
+  }
 
   static filter(data, table) {
     return new Promise(async (resolve, reject) => {
@@ -19,9 +21,10 @@ class Models {
         .join(' AND ');
       const queryText = `SELECT * FROM ${table} WHERE ${placeholders}`;
       const client = await pool.connect();
-      const result = await client.query(queryText, Object.values(data));
+      client.query(queryText, Object.values(data), (err, result)=>{
+        resolve(result.rows);
+      });
       client.release();
-      resolve(result.rows);
     });
   }
 
@@ -29,9 +32,10 @@ class Models {
     return new Promise(async (resolve, reject) => {
       const queryText = `SELECT * FROM ${table} WHERE id = ${id}`;
       const client = await pool.connect();
-      const result = await client.query(queryText);
+      client.query(queryText, (err, result)=>{
+        resolve(result.rows);
+      });
       client.release();
-      resolve(result.rows);
     });
   }
 
@@ -45,34 +49,33 @@ class Models {
         .join(`, `);
       const queryText = `INSERT INTO ${table} (${placeholdersCol}) VALUES (${placeholdersVal})`;
       const client = await pool.connect();
-      client.query(queryText, (err, result)=>{
-        resolve(result)
+      client.query(queryText, (err, result) => {
+        resolve(result);
       });
       client.release();
     });
   }
 
-  // static async update (data, id, table) {
-  //   await new Promise((resolve, reject) => {
-  //     const sql = 'UPDATE ?? SET ? WHERE id = ?';
-  //     db.query(sql, [table, data, id], (error, results) => {
-  //       if (error) throw error;
-  //       resolve(results)
-  //     })
-  //   })
+  static update (data, id, table) {
+    return new Promise(async(resolve, reject) => {
+      const placeholders = Object.entries(data).map(([key, value])=>`${key} = '${value}'`).join(', ');
+      const queryText = `UPDATE ${table} SET ${placeholders} WHERE id = ${id}`
+      const client = await pool.connect();
+      client.query(queryText, (err, result)=>{
+        resolve(result)
+      })
+    })
+  }
 
-  //   return this.find(id, table);
-  // }
-
-  // static delete(id, table){
-  //   return new Promise((resolve, reject) => {
-  //     const sql = 'DELETE FROM ?? WHERE id = ?';
-  //     db.query(sql, [table, id], (error, results) => {
-  //       if(error) throw error;
-  //       resolve(results);
-  //     })
-  //   })
-  // }
+  static delete(id, table){
+    return new Promise(async(resolve, reject) => {
+      const queryText = `DELETE FROM ${table} WHERE id = ${id}`;
+      const client = await pool.connect();
+      client.query(queryText, (err, result)=>{
+        resolve(result)
+      })
+    })
+  }
 }
 
 export default Models;

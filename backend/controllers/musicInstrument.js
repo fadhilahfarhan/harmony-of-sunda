@@ -62,38 +62,34 @@ class MusicInstrument {
     res.status(404).json({message: 'gagal'})
   }
 
-  // async update(req, res) { 
-  //   const { id } = req.params;
-  //   const { nama, jenis, gambar } = req.body;
-  //   const findInstrument = await Models.find(id, table);
+  async update(req, res) { 
+    const { id } = req.params;
+    const { nama, jenis, gambar } = req.body;
+    const findInstrument = await Models.find(id, table);
 
-  //   const newData = {
-  //     nama: nama || findInstrument.nama,
-  //     jenis: jenis || findInstrument.jenis,
-  //     gambar: gambar || findInstrument.gambar,
-  //   };
+    const newData = {
+      nama: nama || findInstrument.nama,
+      jenis: jenis || findInstrument.jenis,
+      gambar: gambar || findInstrument.gambar,
+    };
 
-  //   if (findInstrument) {
-  //     const updatedData = await Models.update(newData, id, table);
-  //     console.log(updatedData);
-  //     const data = {
-  //       message: 'Berhasil Memperbarui data alat musik',
-  //       data: updatedData,
-  //     };
-  //     return res.status(201).json(data);
-  //   }
-  //   res.status(404).json({ message: 'Data tidak ditemukan' });
-  // }
+    if (findInstrument.length > 0) {
+      Models.update(newData, id, table);
+      return res.status(201).json({message: 'Berhasil Memperbarui data alat musik'});
+    }
 
-  // async destroy(req, res) {
-  //   const { id } = req.params;
-  //   const findInstrument = await Models.find(id, table);
-  //   if (findInstrument) {
-  //     Models.delete(id, table);
-  //     return res.status(200).json({ message: 'Data berhasil dihapus' });
-  //   }
-  //   res.status(404).json({ message: 'Data tidak ditemukan' });
-  // }
+    res.status(404).json({ message: 'Data tidak ditemukan' });
+  }
+
+  async destroy(req, res) {
+    const { id } = req.params;
+    const findInstrument = await Models.find(id, table);
+    if (findInstrument.length > 0) {
+      Models.delete(id, table);
+      return res.status(200).json({ message: 'Data berhasil dihapus' });
+    }
+    res.status(404).json({ message: 'Data tidak ditemukan' });
+  }
 }
 
 const MusicInstrumentObject = new MusicInstrument();
