@@ -11,6 +11,7 @@ router.get('/alatmusik/:id', MusicInstrument.find);
 router.delete('/alatmusik/:id', MusicInstrument.destroy);
 router.put('/alatmusik/:id', MusicInstrument.update)
 
+
 router.get('/bajutradisional', TraditionalDress.index);
 router.get('/bajutradisional/filter', TraditionalDress.filter);
 router.post('/bajutradisional', TraditionalDress.store);

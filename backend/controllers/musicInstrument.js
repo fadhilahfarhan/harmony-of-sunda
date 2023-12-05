@@ -26,7 +26,6 @@ class MusicInstrument {
     const checkQueryValues = queryEntries.some(
       ([key, value]) => value.trim() != ''
     );
- 
     if (queryEntries.length > 0 && checkQueryValues) {
       const findInstrument = await Models.filter(req.query, table);
       if (findInstrument.length > 0) {

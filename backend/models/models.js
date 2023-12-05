@@ -20,10 +20,12 @@ class Models {
         .join(' AND ');
       const queryText = `SELECT * FROM ${table} WHERE ${placeholders}`;
       const client = await pool.connect();
+
       client.query(queryText, Object.values(data), (err, result)=>{
         resolve(result.rows);
       });
       client.release();
+
     });
   }
 
@@ -31,6 +33,7 @@ class Models {
     return new Promise(async (resolve, reject) => {
       const queryText = `SELECT * FROM ${table} WHERE id = ${id}`;
       const client = await pool.connect();
+
       client.query(queryText, (err, result)=>{
         resolve(result.rows);
       });
@@ -38,7 +41,7 @@ class Models {
     });
   }
 
-  static async create(data, table) {
+  static create(data, table) {
     return new Promise(async (resolve, reject) => {
       const placeholdersCol = Object.keys(data)
         .map((key) => key)
@@ -48,6 +51,7 @@ class Models {
         .join(`, `);
       const queryText = `INSERT INTO ${table} (${placeholdersCol}) VALUES (${placeholdersVal})`;
       const client = await pool.connect();
+
       client.query(queryText, (err, result) => {
         resolve(result);
       });
