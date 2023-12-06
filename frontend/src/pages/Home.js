@@ -1,13 +1,14 @@
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
+import Main from "../components/Main";
+import Jumbroton from "../components/Jumbroton";
 
 function Home() {
   return (
     <div>
-      <Navbar />
-      <main>
-        <h1>Main content</h1>
-      </main>
+			<Navbar/>
+      <Jumbroton />
+      <Main />
       <Footer />
     </div>
   );
