@@ -6,7 +6,7 @@ class Models {
       const queryText = `SELECT * FROM ${table}`;
       const client = await pool.connect();
       client.query(queryText, (err, result)=>{
-        resolve(result.rows);
+        resolve(result.rows); 
       });
       client.release();
     });
