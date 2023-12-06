@@ -1,7 +1,10 @@
-import express from 'express'
+import express from 'express';
 import MusicInstrument from '../controllers/musicInstrument.js';
 import TraditionalDress from '../controllers/traditionalDress.js';
- 
+import TraditionalSong from '../controllers/traditionalSong.js';
+import TraditionalHouse from '../controllers/traditionalHouse.js';
+import TraditionalDance from '../controllers/traditionalDance.js';
+
 const router = express.Router();
 
 router.get('/alatmusik', MusicInstrument.index);
@@ -9,14 +12,34 @@ router.get('/alatmusik/filter', MusicInstrument.filter);
 router.post('/alatmusik', MusicInstrument.store);
 router.get('/alatmusik/:id', MusicInstrument.find);
 router.delete('/alatmusik/:id', MusicInstrument.destroy);
-router.put('/alatmusik/:id', MusicInstrument.update)
+router.put('/alatmusik/:id', MusicInstrument.update);
 
+router.get('/baju', TraditionalDress.index);
+router.get('/baju/filter', TraditionalDress.filter);
+router.post('/baju', TraditionalDress.store);
+router.get('/baju/:id', TraditionalDress.find);
+router.delete('/baju/:id', TraditionalDress.destroy);
+router.put('/baju/:id', TraditionalDress.update);
 
-router.get('/bajutradisional', TraditionalDress.index);
-router.get('/bajutradisional/filter', TraditionalDress.filter);
-router.post('/bajutradisional', TraditionalDress.store);
-router.get('/bajutradisional/:id', TraditionalDress.find);
-router.delete('/bajutradisional/:id', TraditionalDress.destroy);
-router.put('/bajutradisional/:id', TraditionalDress.update)
+router.get('/lagu', TraditionalSong.index);
+router.get('/lagu/filter', TraditionalSong.filter);
+router.post('/lagu', TraditionalSong.store);
+router.get('/lagu/:id', TraditionalSong.find);
+router.delete('/lagu/:id', TraditionalSong.destroy);
+router.put('/lagu/:id', TraditionalSong.update);
+
+router.get('/rumah', TraditionalHouse.index);
+router.get('/rumah/filter', TraditionalHouse.filter);
+router.post('/rumah', TraditionalHouse.store);
+router.get('/rumah/:id', TraditionalHouse.find);
+router.delete('/rumah/:id', TraditionalHouse.destroy);
+router.put('/rumah/:id', TraditionalHouse.update);
+
+router.get('/tarian', TraditionalDance.index);
+router.get('/tarian/filter', TraditionalDance.filter);
+router.post('/tarian', TraditionalDance.store);
+router.get('/tarian/:id', TraditionalDance.find);
+router.delete('/tarian/:id', TraditionalDance.destroy);
+router.put('/tarian/:id', TraditionalDance.update);
 
 export default router;
