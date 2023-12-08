@@ -28,6 +28,28 @@
   color: #61dafb;
 }
 
+/* HOME */
+.about-sunda {
+	width: 80%;
+	margin: auto;
+}
+
+.paragraf-main {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.circle-img {
+    width: 100px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    height: 100px;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+	border: 2px solid #fff;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Jarak antara gambar dan teks */
+}
+/* End HOME */
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
