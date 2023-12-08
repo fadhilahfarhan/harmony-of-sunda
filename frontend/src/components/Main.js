@@ -55,6 +55,16 @@ const Main = () => {
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Body>
+              <Card.Title>Music</Card.Title>
+              <Card.Text>
+                Ciri khas lagu dari suku Sunda
+              </Card.Text>
+              <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+          </Card>
         </Row>
         <Row>
 
