@@ -26,6 +26,8 @@ class TraditionalSong {
     const checkQueryValues = queryEntries.some(
       ([key, value]) => value.trim() != ''
     );
+    const data = req.query
+    console.log(data);
     if (queryEntries.length > 0 && checkQueryValues) {
       const findSong = await Models.filter(req.query, table);
       if (findSong.length > 0) {

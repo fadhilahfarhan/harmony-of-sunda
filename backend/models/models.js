@@ -5,8 +5,8 @@ class Models {
     return new Promise(async (resolve, reject) => {
       const queryText = `SELECT * FROM ${table}`;
       const client = await pool.connect();
-      client.query(queryText, (err, result)=>{
-        resolve(result.rows); 
+      client.query(queryText, (err, result) => {
+        resolve(result.rows);
       });
       client.release();
     });
@@ -15,17 +15,14 @@ class Models {
   static filter(data, table) {
     return new Promise(async (resolve, reject) => {
       const keys = Object.keys(data);
-      const placeholders = keys
-        .map((key, index) => `${key} = $${index + 1}`)
-        .join(' AND ');
-      const queryText = `SELECT * FROM ${table} WHERE ${placeholders}`;
+      console.log(keys);
+      // const queryText = `SELECT * FROM ${table} WHERE ${placeholders}`;
       const client = await pool.connect();
 
-      client.query(queryText, Object.values(data), (err, result)=>{
+      client.query("SELECT * FROM lagudaerahsunda WHERE id = 3 AND judul = 'tanah sunda'", (err, result) => {
         resolve(result.rows);
       });
       client.release();
-
     });
   }
 
@@ -34,7 +31,7 @@ class Models {
       const queryText = `SELECT * FROM ${table} WHERE id = ${id}`;
       const client = await pool.connect();
 
-      client.query(queryText, (err, result)=>{
+      client.query(queryText, (err, result) => {
         resolve(result.rows);
       });
       client.release();
@@ -43,15 +40,22 @@ class Models {
 
   static create(data, table) {
     return new Promise(async (resolve, reject) => {
-      const placeholdersCol = Object.keys(data)
-        .map((key) => key)
-        .join(`, `);
-      const placeholdersVal = Object.values(data)
+      const placeholdersCol = Object.keys(data).join(', ');
+
+      let placeholdersVal = Object.values(data)
         .map((value) => `'${value}'`)
-        .join(`, `);
+        .join(', ');
+
+      if ('lirik' in data) {
+        const lirikArray = data['lirik'].map((item) => `'${item}'`).join(',');
+        placeholdersVal = placeholdersVal.replace(
+          `'${data['lirik']}'`, `ARRAY[${lirikArray}]`,
+        );
+      }
+
       const queryText = `INSERT INTO ${table} (${placeholdersCol}) VALUES (${placeholdersVal})`;
       const client = await pool.connect();
-
+      console.log(queryText);
       client.query(queryText, (err, result) => {
         resolve(result);
       });
@@ -59,25 +63,27 @@ class Models {
     });
   }
 
-  static update (data, id, table) {
-    return new Promise(async(resolve, reject) => {
-      const placeholders = Object.entries(data).map(([key, value])=>`${key} = '${value}'`).join(', ');
-      const queryText = `UPDATE ${table} SET ${placeholders} WHERE id = ${id}`
+  static update(data, id, table) {
+    return new Promise(async (resolve, reject) => {
+      const placeholders = Object.entries(data)
+        .map(([key, value]) => `${key} = '${value}'`)
+        .join(', ');
+      const queryText = `UPDATE ${table} SET ${placeholders} WHERE id = ${id}`;
       const client = await pool.connect();
-      client.query(queryText, (err, result)=>{
-        resolve(result)
-      })
-    })
+      client.query(queryText, (err, result) => {
+        resolve(result);
+      });
+    });
   }
 
-  static delete(id, table){
-    return new Promise(async(resolve, reject) => {
+  static delete(id, table) {
+    return new Promise(async (resolve, reject) => {
       const queryText = `DELETE FROM ${table} WHERE id = ${id}`;
       const client = await pool.connect();
-      client.query(queryText, (err, result)=>{
-        resolve(result)
-      })
-    })
+      client.query(queryText, (err, result) => {
+        resolve(result);
+      });
+    });
   }
 }
 
