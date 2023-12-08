@@ -1,12 +1,22 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
+    <>
       <nav>
-        <h1>Harmony of Sunda</h1>
         <ul>
-          <li>Home</li>
-          <li>About</li>
+          <li>
+            <Link to="/">HOME</Link>
+          </li>
+          <li>
+            <Link to="/art">ART</Link>
+          </li>
+          <li>
+            <Link to="/about">ABOUT US</Link>
+          </li>
         </ul>
       </nav>
+    </>
   );
 }
 
