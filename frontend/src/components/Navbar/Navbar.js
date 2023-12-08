@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
   const navRef = useRef();
@@ -17,7 +19,7 @@ const Navbar = () => {
       <header>
         <h3>Harmony of Sunda</h3>
 			<nav ref={navRef}>
-				<a href="/#">Home</a>
+      <Link to="/">Home</Link>
 				<div className={`dropdown ${isArtDropdownOpen ? "active" : ""}`}>
           <button className="dropbtn" onClick={toggleArtDropdown}>
             Art
@@ -30,7 +32,7 @@ const Navbar = () => {
             <a href="/#">Rumah Adat</a>
           </div>
         </div>
-				<a href="/#">About Us</a>
+        <Link to="/about-us">About Us</Link>
 				<button className="nav-btn nav-close-btn" onClick={showNavbar}>
 					<FaTimes />
 				</button>

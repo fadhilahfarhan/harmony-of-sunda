@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import './Jumbroton.css';
 
 const Jumbroton = () => {
     return (
@@ -8,7 +9,7 @@ const Jumbroton = () => {
             <h1 className="text-center">"HARMONY OF SUNDA"</h1>
             <p className="text-center">Educational website fo find out about Sundanese culture</p>
 
-            <Carousel>
+            <Carousel style={{ width: '90%', margin: 'auto' }}>
       <Carousel.Item interval={1000}>
         <img
             className="carousel-img d-block w-100"
