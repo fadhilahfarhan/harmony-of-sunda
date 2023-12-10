@@ -24,7 +24,7 @@ class TraditionalSong {
   async find(req, res) {
     const { id } = req.params;
     const findSong = await Models.find(id, table);
-    if (findSong.length > 0) {
+    if (findSong) {
       const data = {
         message: 'mendapatkan data berdasarkan id',
         data: findSong,
@@ -52,9 +52,10 @@ class TraditionalSong {
       ciptaan: ciptaan || findSong.ciptaan,
       lirik: lirik || findSong.lirik,
       audio: audio || findSong.audio,
+      updated_at: new Date().toISOString()
     };
 
-    if (findSong.length > 0) {
+    if (findSong) {
       Models.update(newData, id, table);
       return res.status(201).json({message: 'Berhasil Memperbarui data lagu daerah'});
     }

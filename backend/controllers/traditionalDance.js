@@ -24,7 +24,7 @@ class TraditionalDance {
   async find(req, res) {
     const { id } = req.params;
     const findDance = await Models.find(id, table);
-    if (findDance.length > 0) {
+    if (findDance) {
       const data = {
         message: 'mendapatkan data berdasarkan id',
         data: findDance,
@@ -51,9 +51,10 @@ class TraditionalDance {
       nama: nama || findDance.nama,
       deskripsi: deskripsi || findDance.deskripsi,
       gambar: gambar || findDance.gambar,
+      updated_at: new Date().toISOString()
     };
 
-    if (findDance.length > 0) {
+    if (findDance) {
       Models.update(newData, id, table);
       return res.status(201).json({message: 'Berhasil Memperbarui data rumah tradisional'});
     }
