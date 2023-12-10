@@ -12,20 +12,6 @@ class Models {
     });
   }
 
-  static filter(data, table) {
-    return new Promise(async (resolve, reject) => {
-      const keys = Object.keys(data);
-      console.log(keys);
-      // const queryText = `SELECT * FROM ${table} WHERE ${placeholders}`;
-      const client = await pool.connect();
-
-      client.query("SELECT * FROM lagudaerahsunda WHERE id = 3 AND judul = 'tanah sunda'", (err, result) => {
-        resolve(result.rows);
-      });
-      client.release();
-    });
-  }
-
   static find(id, table) {
     return new Promise(async (resolve, reject) => {
       const queryText = `SELECT * FROM ${table} WHERE id = ${id}`;

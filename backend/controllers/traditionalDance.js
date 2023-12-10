@@ -21,26 +21,6 @@ class TraditionalDance {
     }
   }
 
-  async filter(req, res) {
-    const queryEntries = Object.entries(req.query);
-    const checkQueryValues = queryEntries.some(
-      ([key, value]) => value.trim() != ''
-    );
- 
-    if (queryEntries.length > 0 && checkQueryValues) {
-      const findDance = await Models.filter(req.query, table);
-      if (findDance.length > 0) {
-        const data = {
-          message: `Mendapatkan data berhasil`,
-          data: findDance,
-        };
-        return res.status(200).json(data);
-      }
-      return res.status(404).json({ message: 'data Tidak ada' });
-    }
-    res.status(404).json({ message: 'data Tidak ada' });
-  }
-
   async find(req, res) {
     const { id } = req.params;
     const findDance = await Models.find(id, table);

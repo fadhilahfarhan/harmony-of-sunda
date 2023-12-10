@@ -21,27 +21,6 @@ class TraditionalSong {
     }
   }
 
-  async filter(req, res) {
-    const queryEntries = Object.entries(req.query);
-    const checkQueryValues = queryEntries.some(
-      ([key, value]) => value.trim() != ''
-    );
-    const data = req.query
-    console.log(data);
-    if (queryEntries.length > 0 && checkQueryValues) {
-      const findSong = await Models.filter(req.query, table);
-      if (findSong.length > 0) {
-        const data = {
-          message: `Mendapatkan data berhasil`,
-          data: findSong,
-        };
-        return res.status(200).json(data);
-      }
-      return res.status(404).json({ message: 'data Tidak ada' });
-    }
-    res.status(404).json({ message: 'data Tidak ada' });
-  }
-
   async find(req, res) {
     const { id } = req.params;
     const findSong = await Models.find(id, table);
