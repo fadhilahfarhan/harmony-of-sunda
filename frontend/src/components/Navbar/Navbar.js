@@ -25,11 +25,11 @@ const Navbar = () => {
             Art
           </button>
           <div className="dropdown-content">
-            <a href="/#">Alat Musik</a>
-            <a href="/#">Lagu Daerah</a>
-            <a href="/#">Tarian Tradisional</a>
-            <a href="/#">Baju Adat</a>
-            <a href="/#">Rumah Adat</a>
+            <Link to="/art/musical-instrument">Alat Musik</Link>
+            <Link to="/art/music-traditional">Lagu Daerah</Link>
+            <Link to="/art/dance-traditional">Tarian Tradisional</Link>
+            <Link to="/art/attire-traditional">Baju Adat</Link>
+            <Link to="/art/house-traditional">Rumah Adat</Link>
           </div>
         </div>
         <Link to="/about-us">About Us</Link>

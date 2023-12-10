@@ -7,7 +7,7 @@ const Main = () => {
     <div>
       <div className='about-sunda'>
         <h1 className="text-center mt-4">Tentang Suku Sunda</h1>
-        <p className="text-center">
+        <p className=" text-center">
           Jawa Barat dikenal sebagai tanah Parahiangan yang kaya dengan keindahan alam dan
           pesona budayanya. Suku sunda merupakan bentuk keberadaan suku yang mendiami daerah
           tersebut. Seiring berkembangnya zaman kesenian suku sunda banyak sekali terancam punah,

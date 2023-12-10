@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .App {
   text-align: center;
 }
@@ -28,10 +30,19 @@
   color: #61dafb;
 }
 
-/* HOME */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* MAIN */
 .about-sunda {
 	width: 80%;
 	margin: auto;
+}
+
+.about-sunda p {
+  font-weight: 400;
+  color: grey;
 }
 
 .paragraf-main {
@@ -47,7 +58,12 @@
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px; /* Jarak antara gambar dan teks */
 }
-/* End HOME */
+
+.grey-p {
+  font-weight: 400;
+  color: grey;
+}
+/* End MAIN */
 
 
 @keyframes App-logo-spin {
