@@ -18,7 +18,8 @@ class Models {
       const client = await pool.connect();
 
       client.query(queryText, (err, result) => {
-        resolve(result.rows);
+        const [data] = result.rows
+        resolve(data);
       });
       client.release();
     });
@@ -41,7 +42,6 @@ class Models {
 
       const queryText = `INSERT INTO ${table} (${placeholdersCol}) VALUES (${placeholdersVal})`;
       const client = await pool.connect();
-      console.log(queryText);
       client.query(queryText, (err, result) => {
         resolve(result);
       });

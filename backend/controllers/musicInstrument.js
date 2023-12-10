@@ -24,7 +24,7 @@ class MusicInstrument {
   async find(req, res) {
     const { id } = req.params;
     const findInstrument = await Models.find(id, table);
-    if (findInstrument.length > 0) {
+    if (findInstrument) {
       const data = {
         message: 'mendapatkan data berdasarkan id',
         data: findInstrument,
@@ -44,16 +44,17 @@ class MusicInstrument {
 
   async update(req, res) { 
     const { id } = req.params;
-    const { nama, jenis, gambar } = req.body;
+    const { nama, deskripsi, gambar } = req.body;
     const findInstrument = await Models.find(id, table);
 
     const newData = {
       nama: nama || findInstrument.nama,
-      jenis: jenis || findInstrument.jenis,
+      deskripsi: deskripsi || findInstrument.deskripsi,
       gambar: gambar || findInstrument.gambar,
+      updated_at: new Date().toISOString()
     };
 
-    if (findInstrument.length > 0) {
+    if (findInstrument) {
       Models.update(newData, id, table);
       return res.status(201).json({message: 'Berhasil Memperbarui data alat musik'});
     }

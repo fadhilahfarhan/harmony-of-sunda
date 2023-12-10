@@ -24,7 +24,7 @@ class TraditionalHouse {
   async find(req, res) {
     const { id } = req.params;
     const findHouse = await Models.find(id, table);
-    if (findHouse.length > 0) {
+    if (findHouse) {
       const data = {
         message: 'mendapatkan data berdasarkan id',
         data: findHouse,
@@ -51,9 +51,10 @@ class TraditionalHouse {
       nama: nama || findHouse.nama,
       deskripsi: deskripsi || findHouse.deskripsi,
       gambar: gambar || findHouse.gambar,
+      updated_at: new Date().toISOString()
     };
 
-    if (findHouse.length > 0) {
+    if (findHouse) {
       Models.update(newData, id, table);
       return res.status(201).json({message: 'Berhasil Memperbarui data rumah tradisional'});
     }
