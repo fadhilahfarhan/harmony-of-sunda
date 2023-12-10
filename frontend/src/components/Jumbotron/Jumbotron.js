@@ -1,15 +1,14 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import './Jumbroton.css';
+import './Jumbotron.css';
 
 const Jumbroton = () => {
     return (
         <div>
-            <h4 className="text-center mt-3">Welcome</h4>
-            <h1 className="text-center">"HARMONY OF SUNDA"</h1>
-            <p className="text-center">Educational website fo find out about Sundanese culture</p>
+            <h1 className="headline text-center mt-3">"HARMONY OF SUNDA"</h1>
+            <p className="grey-p text-center">Educational website fo find out about Sundanese culture</p>
 
-            <Carousel style={{ width: '90%', margin: 'auto' }}>
+            <Carousel style={{ width: '100%', margin: 'auto' }}>
       <Carousel.Item interval={1000}>
         <img
             className="carousel-img d-block w-100"
