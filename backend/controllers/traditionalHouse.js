@@ -21,26 +21,6 @@ class TraditionalHouse {
     }
   }
 
-  async filter(req, res) {
-    const queryEntries = Object.entries(req.query);
-    const checkQueryValues = queryEntries.some(
-      ([key, value]) => value.trim() != ''
-    );
- 
-    if (queryEntries.length > 0 && checkQueryValues) {
-      const findHouse = await Models.filter(req.query, table);
-      if (findHouse.length > 0) {
-        const data = {
-          message: `Mendapatkan data berhasil`,
-          data: findHouse,
-        };
-        return res.status(200).json(data);
-      }
-      return res.status(404).json({ message: 'data Tidak ada' });
-    }
-    res.status(404).json({ message: 'data Tidak ada' });
-  }
-
   async find(req, res) {
     const { id } = req.params;
     const findHouse = await Models.find(id, table);
