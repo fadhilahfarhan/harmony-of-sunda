@@ -41,6 +41,15 @@ const Footer = () => {
             <a href='/employes'>
               <p>Dicoding Indonesia</p>
             </a>
+            <a href='/employes'>
+              <p>STT Terpadu Nurul Fikri</p>
+            </a>
+            <a href='/employes'>
+              <p>Politeknik Negeri Jakarta</p>
+            </a>
+            <a href='/employes'>
+              <p>Universitas Multimedia Nusantara</p>
+            </a>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Company</h4>
