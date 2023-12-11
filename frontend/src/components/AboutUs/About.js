@@ -6,17 +6,18 @@ const About = () => {
         <div className='story-about'>
             <Container className='mt-4'>
                 <Row>
-                    <Col className='mt-3'>
-                        <h2>Educational Website To <br /> Find Out About Sundanese <br /> Culture</h2>
-                    </Col>
-                    <Col className='mt-3'>
-                        <p>
-                            The website is user-friendly, making it accessible for both scholars 
-                            and enthusiasts alike. It's a platform that not only educates but also 
-                            fosters appreciation for the diversity and beauty of Sundanese heritage. 
-                            Through "Sunda," individuals from all walks of life can gain a deeper 
-                            understanding of the cultural tapestry that makes up the Sundanese identity.
+                    <Col md={6} className='mt-3'>
+                        <h2>Website Edukasi Untuk <br/> Mengetahui Kebudayaan <br/> Sunda</h2>
+                        <p style={{fontWeight: '200', color: 'grey'}}>
+                            Situs web ini mudah digunakan, sehingga dapat diakses baik oleh para cendekiawan maupun peminatnya. 
+                            Ini adalah platform yang tidak hanya mendidik tetapi juga
+                            menumbuhkan apresiasi terhadap keberagaman dan keindahan peninggalan Sunda.
+                            Melalui “Sunda”, individu dari berbagai lapisan masyarakat dapat memperoleh pemahaman yang lebih mendalam
+                            pemahaman tentang permadani budaya yang membentuk identitas Sunda.
                         </p>
+                    </Col>
+                    <Col md={6} className='mt-3 mb-3'>
+                        <img src='https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg' alt='team' style={{width: '100%', borderRadius: '5px'}}/>
                     </Col>
                 </Row>
             </Container>

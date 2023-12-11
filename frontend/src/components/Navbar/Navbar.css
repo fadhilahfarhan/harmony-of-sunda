@@ -2,7 +2,7 @@
 :root {
 	--mainColor: #29335c;
 	--mainColorLight: #5767aa;
-	--secondaryColor: #4ECB4A;
+	--secondaryColor: #59A3FF;
 	--textColor: #eee;
 }
 
@@ -45,7 +45,7 @@ nav {
 }
 
 header h3 {
-	color: #4ECB4A;
+	color: #ddd;
 	font-weight: 700;
 }
 

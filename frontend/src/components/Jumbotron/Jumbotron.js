@@ -1,6 +1,9 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import './Jumbotron.css';
+import Pengantin from "../../assets/images/main/pengantin.jpg";
+import Pangandaran from "../../assets/images/main/Pangandaran.jpg";
+import Rusa from "../../assets/images/main/rusa.jpg";
 
 const Jumbroton = () => {
     return (
@@ -12,35 +15,35 @@ const Jumbroton = () => {
       <Carousel.Item interval={1000}>
         <img
             className="carousel-img d-block w-100"
-            src="https://images.pexels.com/photos/713644/pexels-photo-713644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={Pangandaran}
             alt="first slide" 
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Pantai Pangandaran, Jawa Barat</h3>
+          <p>kombinasi keindahan alam dengan pasir putih, ombak yang memikat, dan hutan mangrove yang menawan</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={1000}>
       <img
             className="carousel-img d-block w-100"
-            src="https://images.pexels.com/photos/734102/pexels-photo-734102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={Pengantin}
             alt="second slide" 
         />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Baju Pernikahan Suku Sunda</h3>
+          <p>Mahkota tradisional suku Sunda, terbuat dari kuningan, dipakai di kepala dengan hiasan warna cerah, simbol keanggunan.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <img
             className="carousel-img d-block w-100"
-            src="https://images.pexels.com/photos/634242/pexels-photo-634242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={Rusa}
             alt="third slide" 
         />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Hewan Rusa</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          Makhluk elegan di Jawa Barat, sering ditemui di hutan dan taman nasional. Dikenal dengan tanduknya yang indah, rusa menjadi simbol keanggunan alam.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
