@@ -38,22 +38,22 @@ const Footer = () => {
           </div>
           <div className='sb__footer-links_div'>
             <h4>Partners</h4>
-            <a href='/employes'>
+            <a href='https://www.dicoding.com/' target='_blank' rel='noreferrer'>
               <p>Dicoding Indonesia</p>
             </a>
-            <a href='/employes'>
+            <a href='https://nurulfikri.ac.id/' target='_blank' rel='noreferrer'>
               <p>STT Terpadu Nurul Fikri</p>
             </a>
-            <a href='/employes'>
+            <a href='https://www.pnj.ac.id/' target='_blank' rel='noreferrer'>
               <p>Politeknik Negeri Jakarta</p>
             </a>
-            <a href='/employes'>
+            <a href='https://www.umn.ac.id/' target='_blank' rel='noreferrer'>
               <p>Universitas Multimedia Nusantara</p>
             </a>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Company</h4>
-            <a href='/about'>
+            <a href='/about-us'>
               <p>About</p>
             </a>
             <a href='/press'>
