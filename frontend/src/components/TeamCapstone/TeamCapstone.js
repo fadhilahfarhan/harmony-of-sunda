@@ -5,6 +5,7 @@ import Rusa from '../../assets/images/main/rusa.jpg';
 
 import Sashi from '../../assets/images/team/sashi.jpg';
 import Reza from '../../assets/images/team/reza.jpeg';
+import Dicoding from '../../assets/images/team/dicoding.jpg';
 
 const TeamCapstone = () => {
     return (
@@ -79,28 +80,28 @@ const TeamCapstone = () => {
 
                 <div className={styles.column}>
                     <div className={styles.card}>
-                        <div className={styles.imgContainer}><img src={Rusa} alt="sdds"/></div>
+                        <div className={styles.imgContainer}><img src={Rusa} alt="padil"/></div>
                         <h3>Fadhillah Farhan</h3>
                         <p className='text-center'>Backend Developer</p>
                         <div className={styles.icons}>
-                            <a href="#"><i className="fab fa-instagram"></i></a>
-                            <a href="#"><i className="fab fa-linkedin"></i></a>
-                            <a href="#"><i className="fab fa-github"></i></a>
-                            <a href="#"><i className="fas fa-envelope"></i></a>
+                            <a href="https://www.instagram.com/fadil.farhannn/" target="_blank" rel='noreferrer'><i className="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/fadhilah-farhan-15765229a/" target="_blank" rel='noreferrer'><i className="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/fadhilahfarhan" target="_blank" rel='noreferrer'><i className="fab fa-github"></i></a>
+                            <a href="mailto:fadhilahfarhan2004@gmail.com" target="_blank" rel='noreferrer'><i className="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div className={styles.column}>
                     <div className={styles.card}>
-                        <div className={styles.imgContainer}><img src={Rusa} alt="sdds"/></div>
+                        <div className={styles.imgContainer}><img src={Dicoding} alt="dicoding"/></div>
                         <h3>Dicoding Academy</h3>
                         <p className='text-center'>Mentor</p>
                         <div className={styles.icons}>
-                            <a href="#"><i className="fab fa-instagram"></i></a>
-                            <a href="#"><i className="fab fa-linkedin"></i></a>
-                            <a href="#"><i className="fab fa-github"></i></a>
-                            <a href="#"><i className="fas fa-envelope"></i></a>
+                            <a href="https://www.dicoding.com/" target="_blank" rel='noreferrer'><i className="fab fa-instagram"></i></a>
+                            <a href="https://www.dicoding.com/" target="_blank" rel='noreferrer'><i className="fab fa-linkedin"></i></a>
+                            <a href="https://www.dicoding.com/" target="_blank" rel='noreferrer'><i className="fab fa-github"></i></a>
+                            <a href="https://www.dicoding.com/" target="_blank" rel='noreferrer'><i className="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>

@@ -14,8 +14,8 @@ const Footer = () => {
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
             <h4>For Business</h4>
-            <a href='/employer'>
-              <p>employer</p>
+            <a href='/about-us'>
+              <p>Team</p>
             </a>
             <a href='/healthplan'>
               <p>Health Plan</p>
@@ -56,13 +56,13 @@ const Footer = () => {
             <a href='/about-us'>
               <p>About</p>
             </a>
-            <a href='/press'>
+            <a href='/about-us'>
               <p>Press</p>
             </a>
-            <a href='/career'>
+            <a href='/about-us'>
               <p>Career</p>
             </a>
-            <a href='/contact'>
+            <a href='/about-us'>
               <p>Contact</p>
             </a>
           </div>
