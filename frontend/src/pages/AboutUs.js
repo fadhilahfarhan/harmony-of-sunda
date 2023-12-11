@@ -5,8 +5,7 @@ import TeamCapstone from "../components/TeamCapstone/TeamCapstone";
 const AboutUs = () => {
     return (
         <div>
-            <h4 className="text-center mt-3">About Us</h4>
-            <h1 className="text-center">"HARMONY OF SUNDA"</h1>
+            <h1 className="text-center mt-3">About Us</h1>
 
             <About />
 

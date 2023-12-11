@@ -34,36 +34,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* MAIN */
-.about-sunda {
-	width: 80%;
-	margin: auto;
-}
 
-.about-sunda p {
-  font-weight: 400;
-  color: grey;
-}
-
-.paragraf-main {
-	margin-left: 100px;
-	margin-right: 100px;
-}
-
-.circle-img {
-    width: 100px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
-    height: 100px;
-    border-radius: 50%; /* Membuat gambar menjadi bulat */
-	border: 2px solid #fff;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px; /* Jarak antara gambar dan teks */
-}
-
-.grey-p {
-  font-weight: 400;
-  color: grey;
-}
-/* End MAIN */
 
 
 @keyframes App-logo-spin {
