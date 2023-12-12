@@ -1,17 +1,3 @@
-.headline__instrument {
-    color: #59A3FF;
-}
-
-.paragraf__instrument {
-    color: grey;
-    text-align: justify;
-} 
-
-.colRight img {
-    width: 100%;
-    border-radius: 10px;
-}
-
 .container {
     position: relative;
     display: flex;

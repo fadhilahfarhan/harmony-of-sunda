@@ -1,7 +1,11 @@
+import Header from '../../components/Header/Header'
+import Instrumental from '../../components/Instrumental/Instrumental'
+
 const AttireTraditional = () => {
     return (
       <>
-        <h1>Attire page</h1>
+        <Header/>
+        <Instrumental/>
       </>
     );
   }

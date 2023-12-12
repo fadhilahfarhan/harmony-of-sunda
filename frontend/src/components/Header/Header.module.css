@@ -1,0 +1,19 @@
+.headline__instrument {
+    color: #59A3FF;
+}
+
+.paragraf__instrument {
+    color: grey;
+    text-align: justify;
+} 
+
+.colRight img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 450px) {
+    .colRight img {
+        width: 100%;
+    }
+}
