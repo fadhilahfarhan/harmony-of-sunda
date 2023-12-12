@@ -1,15 +1,14 @@
-.about-sunda {
+.about__sunda {
 	width: 80%;
 	margin: auto;
 }
 
-.about-sunda p {
+.about__sunda p {
   font-weight: 400;
   color: grey;
 }
 
-.paragraf-main {
+/* .paragraf__main {
 	margin-left: 100px;
 	margin-right: 100px;
-}
-
+} */
