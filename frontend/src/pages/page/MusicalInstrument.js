@@ -1,7 +1,10 @@
+import React from 'react';
+import Instrumental from '../../components/Instrumental/Instrumental'
+
 const MusicalInstrument = () => {
     return (
       <>
-        <h1>Musical page</h1>
+        <Instrumental />
       </>
     );
   }

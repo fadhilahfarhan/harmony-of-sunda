@@ -1,6 +1,7 @@
 import Team from '../Team/Team';
 import styles from './Teams.module.css';
 import sashi from '../../assets/images/team/sashi.jpg';
+import raihan from '../../assets/images/team/raihan.jpg';
 import reza from '../../assets/images/team/reza.jpeg';
 import dicoding from '../../assets/images/team/dicoding.jpg';
 import rusa from '../../assets/images/main/rusa.jpg';
@@ -28,7 +29,7 @@ const Teams = () => {
                 email='mailto:kiranasashi68@gmail.com'
               />
               <Team
-                profile={rusa}
+                profile={raihan}
                 name='Raihan Bayu'
                 position='UI Design'
                 instagram=''
