@@ -7,10 +7,16 @@ const AttireTraditional = () => {
     return (
       <>
         <Header
-          titleArticle='Aneka ragam baju adat suku Sunda memiliki ciri, filosofi dan keunikan masing-masing'
-          descriptionArticle='Pakaian adat Jawa Barat dikenal berdasarkan umur, fungsi dan strata sosial. Secara umum, 
-          ada pakaian adat yang digunakan oleh masyarakat biasa, kaum menengah dan para bangsawan. Ketiga jenis pakaian 
-          adat tersebut akan terus dilestarikan hingga sekarang. Berikut jeni-jenis pakaian adat Jawa Barat yang populer:'
+          titleArticle='Pesona Baju Adat Sunda: Lebih dari Sekadar Pakaian'
+          descriptionArticle='Baju Adat Sunda bukan hanya pakaian, melainkan 
+          karya seni yang menggambarkan cerita panjang dan kaya akan warisan budaya. 
+          Mulai dari keelokan tata warna yang mencerminkan alam sekitar hingga pola 
+          tradisional yang mendalam, setiap detail menuturkan kisah unik tentang sejarah, 
+          kepercayaan, dan kehidupan masyarakat Sunda. Baju Adat Sunda bukan hanya pakaian, 
+          melainkan karya seni yang menggambarkan cerita panjang dan kaya akan warisan budaya. 
+          Mulai dari keelokan tata warna yang mencerminkan alam sekitar hingga pola tradisional 
+          yang mendalam, setiap detail menuturkan kisah unik tentang sejarah, kepercayaan, dan kehidupan 
+          masyarakat Sunda.'
           srcPicture={bajuAdat}
           altPicture='gambar header baju adat'
         />

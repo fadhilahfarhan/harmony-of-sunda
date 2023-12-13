@@ -86,10 +86,10 @@ const Footer = () => {
             </p>
           </div>
           <div className='sb__footer-below-links'>
-            <a href='/terms'><div><p>Terms & Condition</p></div></a>
-            <a href='/privacy'><div><p>Privacy</p></div></a>
-            <a href='/security'><div><p>Security</p></div></a>
-            <a href='/cookie'><div><p>Cookie Declaration</p></div></a>
+            <a href='/about-us'><div><p>Terms & Condition</p></div></a>
+            <a href='/about-us'><div><p>Privacy</p></div></a>
+            <a href='/about-us'><div><p>Security</p></div></a>
+            <a href='/about-us'><div><p>Cookie Declaration</p></div></a>
 
           </div>
         </div>

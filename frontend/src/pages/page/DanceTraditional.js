@@ -13,7 +13,7 @@ const DanceTraditional = () => {
           sering dipentaskan untuk acara kenegaraan Indonesia. Banyak yang merasa senang bahkan terpukau dengan penampilan tarian Sunda, dengan lekukan 
           tangan yang sangat gemulai, disertai goyangan tubuh penarinya yang berirama, membuat tarian Sunda semakin mengagumkan mata penontonnya. Uniknya, 
           dalam seni tarian Sunda terkandung banyak pesan dan cerita yang termuat, mulai dari cerita rakyat, kerajaan hingga pesan kedamaian untuk seluruh Nusantara. 
-          Dikutip dari laman Kebudayaan.kemdikbud.go.id, setiap tari tradisional sunda mempunyai ciri khas gerakan tersendiri serta menggunakan peralatan yang berbeda-beda.
+          
           '
           srcPicture={tarianTradisional}
           altPicture='gambar header tanian tradisional'

@@ -3,6 +3,7 @@ import styles from './Teams.module.css';
 import sashi from '../../assets/images/team/sashi.jpg';
 import raihan from '../../assets/images/team/raihan.jpg';
 import reza from '../../assets/images/team/reza.jpeg';
+import fitri from '../../assets/images/team/fitri.jpg'
 import dicoding from '../../assets/images/team/dicoding.jpg';
 import rusa from '../../assets/images/main/rusa.jpg';
 
@@ -49,7 +50,7 @@ const Teams = () => {
             </div>
             <div className={styles.row}>
               <Team
-                profile={rusa}
+                profile={fitri}
                 name='Nurwahida Fitriani'
                 position='Frontend Developer'
                 instagram='https://www.instagram.com/fitrinw.1/'
