@@ -11,7 +11,7 @@ const Category = (props) => {
           <Card.Body>
             <Card.Title style={{color: '#59A3FF', fontWeight: 'bold'}}>{category}</Card.Title>
             <Card.Text style={{ fontWeight: '400', color: 'grey', fontSize:'14px'}}>{categoryText}</Card.Text>
-            <Button href='/art/music-traditional' variant="primary">See More</Button>
+            <Button href='/art/music-traditional' variant="primary">Selengkapnya...</Button>
           </Card.Body>
         </Card>
       </Col>
