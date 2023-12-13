@@ -2,7 +2,7 @@ import Features from '../../components/Features/Features';
 import Header from '../../components/Header/Header';
 
 import bajuAdat from '../../assets/images/header/bajuadat.png';
-
+import ENDPOINTS from '../../utils/constants/endpoint';
 const AttireTraditional = () => {
     return (
       <>
@@ -14,7 +14,7 @@ const AttireTraditional = () => {
           srcPicture={bajuAdat}
           altPicture='gambar header baju adat'
         />
-        <Features title='Baju Adat Tradisional' />
+        <Features title='Baju Adat Tradisional' endpoint={ENDPOINTS.ATTIRE}/>
       </>
     );
   }

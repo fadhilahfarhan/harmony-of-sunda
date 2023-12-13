@@ -2,6 +2,7 @@ import Header from '../../components/Header/Header';
 import Features from '../../components/Features/Features';
 
 import tarianTradisional from '../../assets/images/header/tarian.png';
+import ENDPOINTS from '../../utils/constants/endpoint';
 
 const DanceTraditional = () => {
     return (
@@ -18,7 +19,7 @@ const DanceTraditional = () => {
           srcPicture={tarianTradisional}
           altPicture='gambar header tanian tradisional'
         />
-        <Features title='Tarian Tradisional'/>
+        <Features title='Tarian Tradisional' endpoint={ENDPOINTS.DANCE}/>
       </>
     );
   }
