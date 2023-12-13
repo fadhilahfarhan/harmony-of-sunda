@@ -1,6 +1,7 @@
 import Features from '../../components/Features/Features';
 import Header from '../../components/Header/Header';
 import lagu from '../../assets/images/header/lagu.png'
+import ENDPOINTS from '../../utils/constants/endpoint';
 
 const MusicTraditional = () => {
   return (
@@ -18,7 +19,7 @@ const MusicTraditional = () => {
         srcPicture={lagu}
         altPicture='gambar ilustrasi lagu'
       />
-      <Features title='Lagu Tradisional'/>
+      <Features title='Lagu Tradisional' endpoint={ENDPOINTS.MUSIC}/>
     </>
   );
 } 

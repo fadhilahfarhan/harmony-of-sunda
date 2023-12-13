@@ -1,6 +1,7 @@
 import Features from '../../components/Features/Features';
 import Header from '../../components/Header/Header';
 import rumahAdat from '../../assets/images/header/rumahAdat.png';
+import ENDPOINTS from '../../utils/constants/endpoint';
 
 const HouseTraditional = () => {
   return (
@@ -16,7 +17,7 @@ const HouseTraditional = () => {
         srcPicture={rumahAdat}
         altPicture='gambar ilustrasi rumah adat'
       />
-      <Features title='Rumah adat Tradisional'/>
+      <Features title='Rumah adat Tradisional' endpoint={ENDPOINTS.HOUSE}/>
     </>
   );
 }

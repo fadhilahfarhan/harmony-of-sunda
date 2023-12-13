@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import Features from '../../components/Features/Features';
 import alatMusik from '../../assets/images/header/alatmusik.png';
+import ENDPOINTS from '../../utils/constants/endpoint';
 
 const MusicalInstrument = () => {
   return (
@@ -20,7 +21,7 @@ const MusicalInstrument = () => {
         srcPicture={alatMusik}
         altPicture='gambar ilustrasi alat musik'
       />
-      <Features title='Alat Musik Tradisional'/>
+      <Features title='Alat Musik Tradisional' endpoint={ENDPOINTS.MUSICAL_INSTRUMENT}/>
     </>
   );
 }
