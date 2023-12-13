@@ -1,5 +1,5 @@
 import React from 'react';
-import Jumbotron from "../components/Jumbotron/Jumbotron";
+import Jumbotron from '../components/Jumbotron/Jumbotron';
 import Categories from '../components/Categories/Categories';
 
 function Home() {

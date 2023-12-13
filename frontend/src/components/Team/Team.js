@@ -2,6 +2,7 @@ import styles from './Team.module.css';
 
 const Team = (props) => {
   const { profile, name, position, instagram, linkedin, github, email } = props;
+
   return (
     <>
       <div className={styles.column}>
