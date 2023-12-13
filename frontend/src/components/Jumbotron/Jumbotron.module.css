@@ -1,5 +1,5 @@
 /* Carousel */
-.carousel-img {
+.carouselImg {
     height: 600px!important;
     border-radius: 10px;
   } 
@@ -9,13 +9,13 @@
     font-style: italic;
   }
 
-.grey-p {
+.greyP {
     font-weight: 400;
     color: grey;
   }
 
 @media only screen and (max-width: 450px) {
-  .carousel-img {
+  .carouselImg {
     height: 300px!important;
   }
   }

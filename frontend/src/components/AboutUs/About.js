@@ -1,14 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import './About.css';
+import styles from './About.module.css';
+import team from "../../assets/images/about/team.png"
 
 const About = () => {
     return (
-        <div className='story-about'>
+        <div className={styles.storyAbout} style={{borderRadius: '20px'}}>
             <Container className='mt-4'>
                 <Row>
-                    <Col md={6} className='mt-3'>
-                        <h2>Website Edukasi Untuk <br/> Mengetahui Kebudayaan <br/> Sunda</h2>
-                        <p style={{fontWeight: '200', color: 'grey'}}>
+                    <Col md={6} className='my-auto p-4'>
+                        <h2 style={{color: '#59A3FF', textAlign: 'left'}}>Website Edukasi Untuk <br/> Mengetahui Kebudayaan <br/> Sunda</h2>
+                        <p style={{fontWeight: '200', color: 'grey', textAlign: 'left'}}>
                             Situs web ini mudah digunakan, sehingga dapat diakses baik oleh para cendekiawan maupun peminatnya. 
                             Ini adalah platform yang tidak hanya mendidik tetapi juga
                             menumbuhkan apresiasi terhadap keberagaman dan keindahan peninggalan Sunda.
@@ -17,7 +18,7 @@ const About = () => {
                         </p>
                     </Col>
                     <Col md={6} className='mt-3 mb-3'>
-                        <img src='https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg' alt='team' style={{width: '100%', borderRadius: '5px'}}/>
+                        <img src={team} alt='team' style={{width: '100%'}}/>
                     </Col>
                 </Row>
             </Container>
