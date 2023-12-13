@@ -30,7 +30,7 @@ const Categories = () => {
                 <Card.Text style={{ fontWeight: '400', color: 'grey', fontSize:'14px'}}>
                 Lagu daerah jawa barat pun jarang sekali diputar bahkan hanya sebagian yang mengetahui.
                 </Card.Text>
-                <Button variant="primary">See More</Button>
+                <Button href='/art/music-traditional' variant="primary">See More</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -43,7 +43,7 @@ const Categories = () => {
                   <Card.Text style={{ fontWeight: '400', color: 'grey', fontSize:'14px'}}>
                   Seringkali di akui negara lain padahal merupakan alat musik dari indonesia daerah jawa barat.
                   </Card.Text>
-                  <Button variant="primary">See More</Button>
+                  <Button href='/art/musical-instrument' variant="primary">See More</Button>
                 </Card.Body>
               </Card>
           </Col>
@@ -56,7 +56,7 @@ const Categories = () => {
                   <Card.Text style={{ fontWeight: '400', color: 'grey', fontSize:'14px'}}>
                   Banyak sekali tari tradisional asal jawa barat yang jarang sekali di ketahui oleh sebagian besar gen z
                   </Card.Text>
-                  <Button variant="primary">See More</Button>
+                  <Button href='/art/dance-traditional' variant="primary">See More</Button>
                 </Card.Body>
               </Card>
           </Col>
@@ -71,7 +71,7 @@ const Categories = () => {
                   <Card.Text style={{ fontWeight: '400', color: 'grey', fontSize:'14px'}}>
                     Rumah adat di Jawa Barat memiliki sejumlah permasalahan menjadi terlupakan 
                   </Card.Text>
-                  <Button variant="primary">See More</Button>
+                  <Button href='/art/house-traditional' variant="primary">See More</Button>
                 </Card.Body>
               </Card>
           </Col>
@@ -84,7 +84,7 @@ const Categories = () => {
                   <Card.Text style={{ fontWeight: '400', color: 'grey', fontSize:'14px'}}>
                   Permasalahan terkait baju adat di Jawa Barat juga dapat menjadi fokus pelestarian budaya
                   </Card.Text>
-                  <Button variant="primary">See More</Button>
+                  <Button href='/art/attire-traditional' variant="primary">See More</Button>
                 </Card.Body>
               </Card>
           </Col>

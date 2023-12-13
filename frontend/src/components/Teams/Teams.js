@@ -1,7 +1,9 @@
 import Team from '../Team/Team';
 import styles from './Teams.module.css';
 import sashi from '../../assets/images/team/sashi.jpg';
+import raihan from '../../assets/images/team/raihan.jpg';
 import reza from '../../assets/images/team/reza.jpeg';
+import dicoding from '../../assets/images/team/dicoding.jpg';
 import rusa from '../../assets/images/main/rusa.jpg';
 
 const Teams = () => {
@@ -27,7 +29,7 @@ const Teams = () => {
                 email='mailto:kiranasashi68@gmail.com'
               />
               <Team
-                profile={rusa}
+                profile={raihan}
                 name='Raihan Bayu'
                 position='UI Design'
                 instagram=''
@@ -59,19 +61,19 @@ const Teams = () => {
                 profile={rusa}
                 name='Fadhillah Farhan'
                 position='Backend Developer'
-                instagram=''
-                linkedin=''
-                github=''
-                email='mailto:'
+                instagram='https://www.instagram.com/ fadil.farhannn/'
+                linkedin=' https://www.linkedin.com/in/fadhilah-farhan-15765229a/'
+                github=' https://github.com/fadhilahfarhan'
+                email='mailto:fadhilahfarhan2004@gmail.com'
               />
               <Team
-                profile={rusa}
+                profile={dicoding}
                 name='Dicoding Academy'
                 position='Mentor'
-                instagram=''
-                linkedin=''
-                github=''
-                email='mailto:'
+                instagram='https://www.dicoding.com/'
+                linkedin='https://www.dicoding.com/'
+                github='https://www.dicoding.com/'
+                email='https://www.dicoding.com/'
               />
             </div>
               </section>
