@@ -24,24 +24,16 @@ const Feature = (props) => {
         </div>
         <div className={styles.content}>
           <h2 className='text-center'>{itemTitle}</h2>
-          <p>{description}</p>
+          <p className={styles.shortDescription}>{description}</p>
           <button onClick={toggleModal} className={styles.btnModal}>Open</button>
 
           {modal && (
             <div className={styles.modal}>
               <div onClick={toggleModal} className={styles.overlay}></div>
-              <div className={styles.modalContent}>
-                <h2>Hello Modal</h2>
-                <img src={itemPicture} alt='feature' style={{width: '50%', height: '50%', objectFit: 'cover'}}/>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                  Similique modi labore quod porro iure esse, quaerat ratione 
-                  facere dolor distinctio accusantium quam perspiciatis, magni 
-                  voluptatum tenetur vel laboriosam voluptatibus facilis eligendi 
-                  repudiandae incidunt. Tempora soluta asperiores aperiam reiciendis
-                  magni ad officia perspiciatis? Minus deserunt repellendus ipsam nesciunt 
-                  ullam pariatur sint.
-                </p>
+              <div className={`${styles.modalContent} p-5`}>
+                <h2>{itemTitle}</h2>
+                <img className='mt-2' src={itemPicture} alt='feature' style={{width: '50%', height: '50%', objectFit: 'cover', borderRadius: '10px'}}/>
+                <p className='mt-3' style={{ color: 'grey' }}>{description}</p>
                 <button className={styles.closeModal} onClick={toggleModal}>Close</button>
               </div>
             </div>
