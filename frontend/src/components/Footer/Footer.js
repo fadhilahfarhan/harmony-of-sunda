@@ -1,11 +1,10 @@
 import React from 'react';
 import './Footer.css';
+
 import IconFacebook from '../../assets/images/socialMedia/facebook.png';
 import IconTwitter from '../../assets/images/socialMedia/twitter.png';
 import IconLinkedin from '../../assets/images/socialMedia/linkedin.png';
 import IconInstagram from '../../assets/images/socialMedia/instagram.png';
-
-
 
 const Footer = () => {
   return (
@@ -21,7 +20,7 @@ const Footer = () => {
               <p>Health Plan</p>
             </a>
             <a href='/individual'>
-              <p>individual</p>
+              <p>Individual</p>
             </a>
           </div>
           <div className='sb__footer-links_div'>
@@ -82,19 +81,17 @@ const Footer = () => {
         <div className='sb__footer-below'>
           <div className='sb__footer-copyright'>
             <p>
-              @{new Date().getFullYear()} Harmony of Sunda. All right reserved.
+              &copy; {new Date().getFullYear()} Harmony of Sunda. All right reserved.
             </p>
           </div>
           <div className='sb__footer-below-links'>
-            <a href='/terms'><div><p>Terms & Condition</p></div></a>
-            <a href='/privacy'><div><p>Privacy</p></div></a>
-            <a href='/security'><div><p>Security</p></div></a>
-            <a href='/cookie'><div><p>Cookie Declaration</p></div></a>
-
+            <a href='/about-us'><div><p>Terms & Condition</p></div></a>
+            <a href='/about-us'><div><p>Privacy</p></div></a>
+            <a href='/about-us'><div><p>Security</p></div></a>
+            <a href='/about-us'><div><p>Cookie Declaration</p></div></a>
           </div>
         </div>
       </div>
-
     </div>
   );
 }

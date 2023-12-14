@@ -16,11 +16,12 @@ const Navbar = () => {
   };
 
   return (
-      <header>
-        <h3>Harmony of Sunda</h3>
-			<nav ref={navRef}>
-      <Link to="/">Home</Link>
-				<div className={`dropdown ${isArtDropdownOpen ? "active" : ""}`}>
+    <header>
+      <h3>Harmony of Sunda</h3>
+
+      <nav ref={navRef}>
+        <Link to="/">Home</Link>
+        <div className={`dropdown ${isArtDropdownOpen ? "active" : ""}`}>
           <button className="dropbtn" onClick={toggleArtDropdown}>
             Art
           </button>
@@ -32,15 +33,17 @@ const Navbar = () => {
             <Link to="/art/house-traditional">Rumah Adat</Link>
           </div>
         </div>
+
         <Link to="/about-us">About Us</Link>
-				<button className="nav-btn nav-close-btn" onClick={showNavbar}>
-					<FaTimes />
-				</button>
-			</nav>
-			<button className="nav-btn" onClick={showNavbar}>
-				<FaBars />
-			</button>
-      </header>
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <FaTimes />
+        </button>
+      </nav>
+
+      <button className="nav-btn" onClick={showNavbar}>
+        <FaBars />
+      </button>
+    </header>
   );
 }
 
