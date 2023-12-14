@@ -1,6 +1,5 @@
 import Feature from '../Feature/Feature';
 import styles from './Features.module.css';
-import rusa from '../../assets/images/main/rusa.jpg';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -24,7 +23,7 @@ const Features = ({title, endpoint}) => {
             <Feature
               key={item.id}
               itemTitle={item.nama}
-              itemPicture={rusa}
+              itemPicture={item.gambar}
               description={item.deskripsi}
             />
           );

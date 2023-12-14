@@ -13,6 +13,7 @@
 
 .card:hover {
   height: 400px;
+  z-index: 500;
 }
 
 .card .imgBx {
@@ -52,6 +53,14 @@
   transition: 0.5s;
 }
 
+.card .content .shortDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
 .card:hover .content {
   top: 130px;
   height: 250px;
@@ -85,10 +94,18 @@ body.active-modal {
 }
 
 .btnModal {
-  padding: 10px 20px;
-  display: block;
-  margin: 100px auto 0;
-  font-size: 18px;
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 10px 20px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 .modal, .overlay {
@@ -104,9 +121,10 @@ body.active-modal {
 .overlay {
   background: rgba(49,49,49,0.8);
 }
+
 .modalContent {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   line-height: 1.4;
@@ -115,6 +133,7 @@ body.active-modal {
   border-radius: 5px;
   max-width: 600px;
   min-width: 300px;
+  z-index: 1000;
 }
 
 .closeModal {
@@ -122,4 +141,16 @@ body.active-modal {
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+  background-color: red; 
+  border: none;
+  color: white;
+  padding: 10px 20px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
 }
