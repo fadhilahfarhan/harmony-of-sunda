@@ -13,12 +13,11 @@ const Features = ({title, endpoint}) => {
     };
 
     getAllData();
-  }, []);
+  }, [endpoint]);
 
   return (
     <>
       <h1 className="text-center mt-4">{title}</h1>
-
       <div className={styles.container}>
         {data.map((item) => {
           return (

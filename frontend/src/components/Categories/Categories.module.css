@@ -1,0 +1,9 @@
+.about__sunda {
+	width: 80%;
+	margin: auto;
+}
+
+.about__sunda p {
+  font-weight: 400;
+  color: grey;
+}
