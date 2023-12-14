@@ -1,7 +1,8 @@
-import Features from '../../components/Features/Features';
 import Header from '../../components/Header/Header';
+
 import lagu from '../../assets/images/header/lagu.png'
-// import ENDPOINTS from '../../utils/constants/endpoint';
+import ENDPOINTS from '../../utils/constants/endpoint';
+import Features from '../../components/Features/Features';
 
 const MusicTraditional = () => {
   return (
@@ -16,12 +17,12 @@ const MusicTraditional = () => {
           kerap diiringi oleh kecapi, kendang, angklung, dan sebagainya. Kekinian, alat musiknya dikolaborasikan 
           dengan gitar, drum, dan alat musik modern lainnya. Lagu daerah Jawa Barat sangat beragam dan memiliki 
           makna tersendiri. Karena maknanya universal, maka lagu-lagu tersebut perlu untuk dilestarikan.'
-          srcPicture={lagu}
-          altPicture='gambar ilustrasi lagu'
-        />
-        <Features title='Lagu Tradisional'/>
-      </>
-    );
-  } 
-  
-  export default MusicTraditional;
+        srcPicture={lagu}
+        altPicture='gambar ilustrasi lagu'
+      />
+      <Features title='Lagu Tradisional' endpoint={ENDPOINTS.MUSIC}/>
+    </>
+  );
+} 
+
+export default MusicTraditional;

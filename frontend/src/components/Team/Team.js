@@ -11,10 +11,10 @@ const Team = (props) => {
           <h3>{name}</h3>
           <p className='text-center'>{position}</p>
           <div className={styles.icons}>
-            <a href={instagram} target="_blank" rel='noreferrer'><i className="fab fa-instagram"></i></a>
-            <a href={linkedin} target="_blank" rel='noreferrer'><i className="fab fa-linkedin"></i></a>
-            <a href={github} target="_blank" rel='noreferrer'><i className="fab fa-github"></i></a>
-            <a href={email} target="_blank" rel='noreferrer'><i className="fas fa-envelope"></i></a>
+            <a href={instagram} target='_blank' rel='noreferrer'><i className='fab fa-instagram'></i></a>
+            <a href={linkedin} target='_blank' rel='noreferrer'><i className='fab fa-linkedin'></i></a>
+            <a href={github} target='_blank' rel='noreferrer'><i className='fab fa-github'></i></a>
+            <a href={email} target='_blank' rel='noreferrer'><i className='fas fa-envelope'></i></a>
           </div>
         </div>
       </div>

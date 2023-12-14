@@ -25,7 +25,7 @@ const Feature = (props) => {
         <div className={styles.content}>
           <h2 className='text-center'>{itemTitle}</h2>
           <p className={styles.shortDescription}>{description}</p>
-          <button onClick={toggleModal} className={styles.btnModal}>Open</button>
+          <button onClick={toggleModal} className={styles.btnModal}>Selengkapnya</button>
 
           {modal && (
             <div className={styles.modal}>
@@ -34,7 +34,7 @@ const Feature = (props) => {
                 <h2>{itemTitle}</h2>
                 <img className='mt-2' src={itemPicture} alt='feature' style={{width: '50%', height: '50%', objectFit: 'cover', borderRadius: '10px'}}/>
                 <p className='mt-3' style={{ color: 'grey' }}>{description}</p>
-                <button className={styles.closeModal} onClick={toggleModal}>Close</button>
+                <button className={styles.closeModal} onClick={toggleModal}>Tutup</button>
               </div>
             </div>
           )}

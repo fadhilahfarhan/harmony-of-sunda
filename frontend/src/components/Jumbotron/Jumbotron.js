@@ -1,7 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import styles from './Jumbotron.module.css';
-
 import Pengantin from '../../assets/images/main/pengantin.jpg';
 import Pangandaran from '../../assets/images/main/Pangandaran.jpg';
 import Rusa from '../../assets/images/main/rusa.jpg';
