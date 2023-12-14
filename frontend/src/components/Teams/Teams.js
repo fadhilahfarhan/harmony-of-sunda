@@ -1,12 +1,11 @@
 import Team from '../Team/Team';
 import styles from './Teams.module.css';
-
 import Sashi from '../../assets/images/team/sashi.jpg';
 import Raihan from '../../assets/images/team/raihan.jpg';
 import Reza from '../../assets/images/team/reza.jpeg';
 import Fitri from '../../assets/images/team/fitri.jpg'
 import Dicoding from '../../assets/images/team/dicoding.jpg';
-import Rusa from '../../assets/images/main/rusa.jpg';
+import Fadhil from '../../assets/images/team/fadhil.jpg';
 
 const Teams = () => {
   return (
@@ -34,10 +33,10 @@ const Teams = () => {
               profile={Raihan}
               name='Raihan Bayu'
               position='UI Design'
-              instagram=''
-              linkedin=''
-              github=''
-              email='mailto:'
+              instagram='https://www.instagram.com/raihanbepe/'
+              linkedin='https://www.linkedin.com/in/raihan-bayu-prasetyo-7662b2235/'
+              github='https://github.com/raihanbayuprasetyo'
+              email='mailto:@raihanbepe02gmail.com'
             />
             <Team
               profile={Reza}
@@ -60,7 +59,7 @@ const Teams = () => {
               email='mailto:fnurwahida@gmail.com'
             />
             <Team
-              profile={Rusa}
+              profile={Fadhil}
               name='Fadhillah Farhan'
               position='Backend Developer'
               instagram='https://www.instagram.com/ fadil.farhannn/'

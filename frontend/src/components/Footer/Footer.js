@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-
 import IconFacebook from '../../assets/images/socialMedia/facebook.png';
 import IconTwitter from '../../assets/images/socialMedia/twitter.png';
 import IconLinkedin from '../../assets/images/socialMedia/linkedin.png';

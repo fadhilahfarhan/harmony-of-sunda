@@ -1,33 +1,18 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import Music from "../Music/Music";
+import Music from '../Music/Music';
+import { Container, Row } from 'react-bootstrap';
+import styles from './Musics.module.css';
 
-const Musics = ({title, endpoint}) => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const getAllData = async () => {
-      const result = await axios.get(endpoint);
-      return setData(result.data.data);
-    };
-
-    getAllData();
-  }, [endpoint]);
+const Musics = (props) => {
+  const { title } = props;
 
   return (
     <>
-      <h1 className="text-center mt-4">{title}</h1>
-      <div className={styles.container}>
-        {data.map((item) => {
-            return (
-              <Music
-                key={item.id}
-                itemTitle={item.judul}
-                
-              />
-            );
-          }
-        )}
-      </div>
+      <h1 className='text-center mt-5'>{title}</h1>
+      <Container className={styles.container}>
+        <Row>
+            <Music />
+          </Row>
+      </Container>
     </>
   );
 }

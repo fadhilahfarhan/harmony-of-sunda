@@ -7,3 +7,8 @@
   font-weight: 400;
   color: grey;
 }
+
+.rowBottom {
+  display: flex;
+  justify-content: center;
+}

@@ -6,7 +6,7 @@ const Header = (props) => {
 
   return (
     <>
-      <Container style={{background: '#ECECEC', borderRadius: '20px'}}>
+      <Container style={{background: '#f6f6f6', borderRadius: '20px'}}>
         <Row className='mt-4 p-4'>
           <Col md={6} className={`${styles.colLeft} my-auto`}>
             <h3 className={styles.headline__instrument}>{titleArticle}</h3>
