@@ -44,14 +44,15 @@ class MusicInstrument {
 
   async update(req, res) { 
     const { id } = req.params;
-    const { nama, deskripsi, gambar } = req.body;
+    const { nama, deskripsi, gambar, cara_memainkan } = req.body;
     const findInstrument = await Models.find(id, table);
 
     const newData = {
       nama: nama || findInstrument.nama,
       deskripsi: deskripsi || findInstrument.deskripsi,
       gambar: gambar || findInstrument.gambar,
-      updated_at: new Date().toISOString()
+      updated_at: new Date().toISOString(),
+      cara_memainkan: cara_memainkan || findInstrument.cara_memainkan
     };
 
     if (findInstrument) {

@@ -4,6 +4,7 @@ import TraditionalDress from '../controllers/traditionalDress.js';
 import TraditionalSong from '../controllers/traditionalSong.js';
 import TraditionalHouse from '../controllers/traditionalHouse.js';
 import TraditionalDance from '../controllers/traditionalDance.js';
+import SundaneseArt from '../controllers/sundaneseArt.js';
 
 const router = express.Router();
 
@@ -36,5 +37,11 @@ router.post('/tarian', TraditionalDance.store);
 router.get('/tarian/:id', TraditionalDance.find);
 router.delete('/tarian/:id', TraditionalDance.destroy);
 router.put('/tarian/:id', TraditionalDance.update);
+
+router.get('/seni', SundaneseArt.index);
+router.post('/seni', SundaneseArt.store);
+router.get('/seni/:id', SundaneseArt.find);
+router.delete('/seni/:id', SundaneseArt.destroy);
+router.put('/seni/:id', SundaneseArt.update);
 
 export default router;
