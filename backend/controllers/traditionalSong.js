@@ -39,25 +39,27 @@ class TraditionalSong {
     if (storeSong) {
       return res.status(200).json({ message: `menambahkan data lagu daerah` });
     }
-    res.status(404).json({message: 'gagal'})
+    res.status(404).json({ message: 'gagal' });
   }
 
-  async update(req, res) { 
+  async update(req, res) {
     const { id } = req.params;
-    const { judul, ciptaan, lirik, audio } = req.body;
+    const { judul, deskripsi, lirik, cover, link_audio } = req.body;
     const findSong = await Models.find(id, table);
 
     const newData = {
       judul: judul || findSong.judul,
-      ciptaan: ciptaan || findSong.ciptaan,
+      deskripsi: deskripsi || findSong.deskripsi,
+      cover: cover || findSong.cover,
+      link_audio: link_audio || findSong.link_audio,
       lirik: lirik || findSong.lirik,
-      audio: audio || findSong.audio,
-      updated_at: new Date().toISOString()
+      updated_at: new Date().toISOString(),
     };
-
     if (findSong) {
       Models.update(newData, id, table);
-      return res.status(201).json({message: 'Berhasil Memperbarui data lagu daerah'});
+      return res
+        .status(201)
+        .json({ message: 'Berhasil Memperbarui data lagu daerah' });
     }
 
     res.status(404).json({ message: 'Data tidak ditemukan' });

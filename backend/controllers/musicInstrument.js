@@ -46,7 +46,7 @@ class MusicInstrument {
     const { id } = req.params;
     const { nama, deskripsi, gambar, cara_memainkan } = req.body;
     const findInstrument = await Models.find(id, table);
-
+    console.log(req.body);
     const newData = {
       nama: nama || findInstrument.nama,
       deskripsi: deskripsi || findInstrument.deskripsi,

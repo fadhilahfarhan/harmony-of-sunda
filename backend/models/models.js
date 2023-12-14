@@ -18,7 +18,7 @@ class Models {
       const client = await pool.connect();
 
       client.query(queryText, (err, result) => {
-        const [data] = result.rows
+        const [data] = result.rows;
         resolve(data);
       });
       client.release();
@@ -36,7 +36,8 @@ class Models {
       if ('lirik' in data) {
         const lirikArray = data['lirik'].map((item) => `'${item}'`).join(',');
         placeholdersVal = placeholdersVal.replace(
-          `'${data['lirik']}'`, `ARRAY[${lirikArray}]`,
+          `'${data['lirik']}'`,
+          `ARRAY[${lirikArray}]`
         );
       }
 
@@ -51,13 +52,24 @@ class Models {
 
   static update(data, id, table) {
     return new Promise(async (resolve, reject) => {
-      const placeholders = Object.entries(data)
-        .map(([key, value]) => `${key} = '${value}'`)
-        .join(', ');
-      const queryText = `UPDATE ${table} SET ${placeholders} WHERE id = ${id}`;
+      const updateValues = Object.entries(data).map(([key, value]) => {
+        if (key === 'lirik') {
+          const lirikArray = value.map((item) => `'${item}'`).join(',');
+          return `${key} = ARRAY[${lirikArray}]`;
+        }
+        return `${key} = '${value}'`;
+      });
+  
+      const updateString = updateValues.join(', ');
+
+      const queryText = `UPDATE ${table} SET ${updateString} WHERE id = ${id}`;
       const client = await pool.connect();
       client.query(queryText, (err, result) => {
-        resolve(result);
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
       });
     });
   }
