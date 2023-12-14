@@ -2,7 +2,7 @@
 :root {
 	--mainColor: #29335c;
 	--mainColorLight: #5767aa;
-	--secondaryColor: #db2b39;
+	--secondaryColor: #59A3FF;
 	--textColor: #eee;
 }
 
@@ -28,6 +28,7 @@ nav a:hover {
 
 header .nav-btn {
 	padding: 5px;
+	margin-bottom: 4%;
 	cursor: pointer;
 	background: transparent;
 	border: none;
@@ -44,6 +45,11 @@ nav {
 	align-items: center;
 }
 
+header h3 {
+	color: #ddd;
+	font-weight: 700;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -54,7 +60,7 @@ nav {
   color: var(--textColor);
   padding: 14px 16px;
   font-size: 16px;
-  border: 2px solid white;
+  border: 2px solid var(--secondaryColor);
   border-radius: 25%;
   cursor: pointer;
 }

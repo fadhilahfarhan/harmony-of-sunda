@@ -14,8 +14,8 @@ const Footer = () => {
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
             <h4>For Business</h4>
-            <a href='/employer'>
-              <p>employer</p>
+            <a href='/about-us'>
+              <p>Team</p>
             </a>
             <a href='/healthplan'>
               <p>Health Plan</p>
@@ -38,22 +38,31 @@ const Footer = () => {
           </div>
           <div className='sb__footer-links_div'>
             <h4>Partners</h4>
-            <a href='/employes'>
+            <a href='https://www.dicoding.com/' target='_blank' rel='noreferrer'>
               <p>Dicoding Indonesia</p>
+            </a>
+            <a href='https://nurulfikri.ac.id/' target='_blank' rel='noreferrer'>
+              <p>STT Terpadu Nurul Fikri</p>
+            </a>
+            <a href='https://www.pnj.ac.id/' target='_blank' rel='noreferrer'>
+              <p>Politeknik Negeri Jakarta</p>
+            </a>
+            <a href='https://www.umn.ac.id/' target='_blank' rel='noreferrer'>
+              <p>Universitas Multimedia Nusantara</p>
             </a>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Company</h4>
-            <a href='/about'>
+            <a href='/about-us'>
               <p>About</p>
             </a>
-            <a href='/press'>
+            <a href='/about-us'>
               <p>Press</p>
             </a>
-            <a href='/career'>
+            <a href='/about-us'>
               <p>Career</p>
             </a>
-            <a href='/contact'>
+            <a href='/about-us'>
               <p>Contact</p>
             </a>
           </div>
