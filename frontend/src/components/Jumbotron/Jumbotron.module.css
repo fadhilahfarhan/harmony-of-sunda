@@ -1,21 +1,22 @@
 /* Carousel */
 .carouselImg {
-    height: 600px!important;
-    border-radius: 10px;
-  } 
-  /* END Carousel */
+  height: 600px!important;
+  border-radius: 10px;
+}
 
+/* END Carousel */
 .headline {
-    font-style: italic;
-  }
+  font-style: italic;
+}
 
 .greyP {
-    font-weight: 400;
-    color: grey;
-  }
+  font-size: large;
+  font-weight: 400;
+  color: grey;
+}
 
 @media only screen and (max-width: 450px) {
   .carouselImg {
     height: 300px!important;
   }
-  }
+}

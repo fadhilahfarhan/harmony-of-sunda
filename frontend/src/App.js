@@ -9,7 +9,6 @@ import DanceTraditional from './pages/page/DanceTraditional';
 import AttireTraditional from './pages/page/AttireTraditional';
 import Layout from './layout/Layout';
 
-
 const App = () => {
   return (
     <>
@@ -25,9 +24,6 @@ const App = () => {
         </Routes>
       </Layout>
     </>
-    // <>
-    //   <Home />
-    // </>
   );
 }
 
